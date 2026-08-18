@@ -7,7 +7,7 @@
 | Linguagem | C# / .NET 8 |
 | Banco vetorial | **Qdrant** (Docker ou binário nativo Windows) |
 | SDK | `Qdrant.Client` (oficial, .NET) |
-| Embeddings | **Gemini Embedding** (`text-embedding-004`, 768 dims, grátis via AI Studio) |
+| Embeddings | **Gemini Embedding** (`gemini-embedding-001`, 768 dims, grátis via AI Studio) |
 | LLM | OpenAI API / Azure OpenAI |
 | Arquitetura | Console app + serviços modulares (DI) |
 
@@ -33,8 +33,9 @@
 
 ## Fase 2 — Embeddings (1-2 dias)
 - Implementar serviço de embeddings (interface `IEmbeddingService`)
-- **Modelo:** Gemini Embedding (`text-embedding-004`, **768 dims**, API gratuita via Google AI Studio)
+- **Modelo:** Gemini Embedding (`gemini-embedding-001`, **768 dims**, `outputDimensionality: 768`, API gratuita via Google AI Studio)
 - Necessário: API key gratuita do Google AI Studio (https://aistudio.google.com/apikey)
+- **Nota:** `text-embedding-004` foi descontinuado; usar `gemini-embedding-001`
 - **Entregável:** dado um texto → retorna um vetor `float[768]`
 
 ---
